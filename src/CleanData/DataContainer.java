@@ -11,13 +11,20 @@ public class DataContainer {
     private CompileContext [] warnings;
     private float timeThinking;
     private int randomID;
+    private int [] compileContext;
+    private int warningIDs;
+    private int errorIDs;
 
     public DataContainer(CompileContext [] errors, CompileContext [] warnings,
-                         float timeThinking, int randomID){
+                         float timeThinking, int randomID, int [] compileContext, int warningIDs, int errorIDs){
         this.errors = errors;
         this.warnings = warnings;
         this.timeThinking = timeThinking;
         this.randomID = randomID;
+        this.compileContext = compileContext;
+        this.warningIDs = warningIDs;
+        this.errorIDs = errorIDs;
+
 
     }
 
@@ -38,5 +45,10 @@ public class DataContainer {
     public int getID(){
         return this.randomID;
     }
+
+    public int [] getCompileContext(){return this.compileContext;}
+
+    public int getWarningIDs() {return this.warningIDs;}
+    public int getErrorIDs() { return this.errorIDs;}
 
 }

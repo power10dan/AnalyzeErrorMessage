@@ -10,6 +10,8 @@ import java.util.Random;
  * Created by Daniel Lin on 2016/10/6.
  */
 public class CompileAndAnalyzeMain extends AnAction {
+    private static final int NUM_COMPILATION_DETAILS = 4;
+
     @Override
     public void actionPerformed(AnActionEvent e) {
 
@@ -31,13 +33,10 @@ public class CompileAndAnalyzeMain extends AnAction {
                 CompilerMessage [] warningMessages = new CompilerMessage[warnings];
                 // store number of errors, warnings, and the number of compilation attempts
                 // attempted so far
-
-                int [] compilationDetails = new int[3];
                 int status = 0;
 
                 if(errors > 0) {
                     errorMessage = compileContext.getMessages(CompilerMessageCategory.ERROR);
-                    System.out.println(errorMessage[0].getMessage());
                 }
 
                 if(warnings > 0){
@@ -52,8 +51,18 @@ public class CompileAndAnalyzeMain extends AnAction {
                 final long compilationFinishTime = System.currentTimeMillis();
                 // actual time solving problem minus compilation time
                 final long timeDiff = compilationFinishTime - getCompilationStartTime;
+
+                // gather additional data about the current compilation session
+                int [] compilationDetails = new int[NUM_COMPILATION_DETAILS];
                 int randomIDFinished = 0;
                 randomIDFinished = randomIdentity;
+                compilationDetails[0] = randomIDFinished;
+                compilationDetails[1] = errors;
+                compilationDetails[2] = warnings;
+                compilationDetails[3] = status;
+
+
+
 
 
             }

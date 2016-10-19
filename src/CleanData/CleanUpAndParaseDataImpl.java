@@ -17,13 +17,20 @@ public class CleanUpAndParaseDataImpl {
 
     public CleanUpAndParaseDataImpl(CompileContext [] errors, CompileContext [] warnings,
                                     float thinkingTime, int randomID){
-        dataContainer = new DataContainer(errors, warnings, thinkingTime, randomID);
-
-    }
-
-    public void sendDataToMySQL(DataContainer dataContainer){
 
 
     }
+
+    public void cleanWarningData(DataContainer dataContainer){
+
+
+    }
+
+    public void cleanErrorData(DataContainer dataContainer){
+
+
+    }
+
+
 
 }
