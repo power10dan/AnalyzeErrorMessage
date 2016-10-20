@@ -29,7 +29,7 @@ public class CompileAndAnalyzeMain extends AnAction {
         randomID = ((1 + r.nextInt(2)) * 10000 + r.nextInt(10000));
         final int randomIdentity = randomID;
 
-        mySQLOperations = new MySQLOperations("com.mysql.jdbc.Driver", "jdbc:mysql://localhost:3306/USERCOMPILATIONDATA", "root", "kec1148!");
+        mySQLOperations = new MySQLOperations("com.mysql.jdbc.Driver", "jdbc:mysql://localhost:3306/USERCOMPILATIONDATA", "", "");
 
         final CompilerManager myCompilerManager = CompilerManager.getInstance(myProject);
         final long getCompilationStartTime = System.currentTimeMillis();
