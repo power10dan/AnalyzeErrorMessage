@@ -32,7 +32,8 @@
     <!-- Add your actions here -->
     <group id="MyPlugin.SampleMenu" text="Error analyzer" description="Sample menu">
       <add-to-group group-id="MainMenu" anchor="last"  />
-      <action id="Myplugin.CompileAnalyze" class="CompileAndAnalyzeMain" text="Start Analyze" description="Begin Analyze" />
+      <action id="Myplugin.StartAnalyze" class="Buttons.CompileAndAnalyzeMain" text="Start Analysis" description="Start Experiment" />
+      <action id="Myplugin.StopAnalyze" class="Buttons.StopAnalysis" text="Stop Analysis" description="Stop Experiment" />
     </group>
   </actions>
 

@@ -61,4 +61,9 @@ public class DataContainer {
     public int getNumberOfErrors() { return this.numberOfErrors; }
     public int getNumberOfWarnings() { return this.numberOfWarnings;}
     public int getStatus() { return this.status;}
+
+    public void outPutToFile(){
+
+    }
+
 }
